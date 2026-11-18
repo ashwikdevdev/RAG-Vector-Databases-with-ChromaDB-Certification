@@ -1,14 +1,32 @@
 # RAG: Vector Databases with ChromaDB Certification
 
+
+## What this project demonstrates
+
+I’m Ashwik, an aspiring AI/ML architect. Through these hands-on labs, I learned how text becomes searchable vector embeddings, how distance metrics affect retrieval, and how structured metadata can make semantic search more targeted. I connected the mathematics of similarity search with practical ChromaDB examples using grocery descriptions and employee profiles.
+
+For recruiters and hiring teams, this repository demonstrates my practical skills in:
+
+- **Python and ChromaDB:** creating collections, adding documents with IDs and metadata, and querying embedded text.
+- **SentenceTransformers and semantic search:** generating document and query embeddings, ranking matches, and interpreting similarity scores.
+- **Vector mathematics:** implementing Euclidean distance, dot products, normalization, and cosine similarity, then checking manual calculations against NumPy, SciPy, and PyTorch.
+- **Metadata filtering:** using department, experience, and location filters, including `$and`, `$gte`, and `$in`, alongside semantic queries.
+- **RAG retrieval fundamentals:** understanding how embedding generation, vector storage, and retrieval support a larger RAG system.
+- **Technical communication and experimentation:** documenting runnable examples and using a Jupyter lab to explore how changes to documents, queries, and result counts affect retrieval.
+
+These learning exercises demonstrate foundational proficiency in vector search and give me a practical base for developing more advanced AI applications.
+
+## Repository overview
+
 Python examples that use Chroma DB and SentenceTransformers for semantic search over grocery descriptions and employee profiles. Learn how to store documents, generate embeddings, retrieve similar results, and combine similarity search with metadata filters.
 
 This repository demonstrates vector storage and retrieval, a building block of retrieval-augmented generation (RAG). It focuses on retrieval and does not include an LLM answer-generation step.
 
 ## Files
 
+- [Similarity Search by Hand.ipynb](Similarity%20Search%20by%20Hand.ipynb): beginner-friendly, hands-on learning lab for embeddings, Euclidean distance, dot products, cosine similarity, and ranked query search.
 - [`ChromaDB_query.py`](ChromaDB_query.py): grocery collection creation, sample data, and similarity search.
 - [`similarity_employeedata.py`](similarity_employeedata.py): employee profile similarity search, metadata filtering, and combined queries.
-- [Similarity Search by Hand.ipynb](Similarity%20Search%20by%20Hand.ipynb): beginner-friendly, hands-on learning lab for embeddings, Euclidean distance, dot products, cosine similarity, and ranked query search.
 - [`requirements-notebook.txt`](requirements-notebook.txt): shared dependencies plus NumPy, SciPy, and JupyterLab.
 - [`requirements.txt`](requirements.txt): Python dependencies and the PyTorch CPU package index.
 
@@ -162,3 +180,7 @@ Select your virtual environment's Python kernel and use **Restart Kernel and Run
 The exercises implement an efficient symmetric Euclidean distance matrix, verify unit-length normalization, and rank documents by cosine similarity to a query. Numerical assertions compare manual calculations with SciPy, NumPy, and PyTorch results.
 
 To customize the lab, edit `documents` and rerun the notebook, or change `query_text` and `top_k` in Exercise 3. Matrix sizes adapt to the document count. The original Skills Network / IBM author credits and copyright notice are retained in the notebook.
+
+## Tags
+
+`python` · `chromadb` · `vector-database` · `semantic-search` · `similarity-search` · `text-embeddings` · `sentence-transformers` · `rag` · `retrieval-augmented-generation` · `cosine-similarity` · `euclidean-distance` · `metadata-filtering` · `numpy` · `scipy` · `pytorch` · `jupyter-notebook` · `machine-learning` · `hands-on-learning`
