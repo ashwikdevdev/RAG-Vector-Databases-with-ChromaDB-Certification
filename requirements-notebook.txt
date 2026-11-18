@@ -1,0 +1,6 @@
+-r requirements.txt
+
+# Additional dependencies for the interactive similarity metrics lab
+numpy
+scipy
+jupyterlab

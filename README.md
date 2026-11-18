@@ -8,6 +8,8 @@ This repository demonstrates vector storage and retrieval, a building block of r
 
 - [`ChromaDB_query.py`](ChromaDB_query.py): grocery collection creation, sample data, and similarity search.
 - [`similarity_employeedata.py`](similarity_employeedata.py): employee profile similarity search, metadata filtering, and combined queries.
+- [Similarity Search by Hand.ipynb](Similarity%20Search%20by%20Hand.ipynb): completed lab for Euclidean distance, dot products, cosine similarity, and ranked query search.
+- [`requirements-notebook.txt`](requirements-notebook.txt): shared dependencies plus NumPy, SciPy, and JupyterLab.
 - [`requirements.txt`](requirements.txt): Python dependencies and the PyTorch CPU package index.
 
 ## Setup and usage
@@ -142,3 +144,19 @@ Edit the `texts` list in `main()` to try different grocery descriptions. The scr
 ### Employee queries
 
 Edit the `employees` list in `main()` to change the sample profiles. Modify the query text and `where` filters in `perform_advaced_search()` to explore other roles, experience thresholds, departments, and locations. Both examples use the same `requirements.txt`; no additional dependencies are needed for the employee example.
+
+
+## Similarity search by hand notebook
+
+The completed [Similarity Search by Hand](Similarity%20Search%20by%20Hand.ipynb) lab explores the mathematics behind vector search without a vector database. It uses `paraphrase-MiniLM-L6-v2` to embed five documents, including Ashwik's software debugging example.
+
+```bash
+python -m pip install -r requirements-notebook.txt
+jupyter lab "Similarity Search by Hand.ipynb"
+```
+
+Select your virtual environment's Python kernel and use **Restart Kernel and Run All Cells**. The first run requires internet access to download the model.
+
+The exercises implement an efficient symmetric Euclidean distance matrix, verify unit-length normalization, and rank documents by cosine similarity to a query. Numerical assertions compare manual calculations with SciPy, NumPy, and PyTorch results.
+
+To customize the lab, edit `documents` and rerun the notebook, or change `query_text` and `top_k` in Exercise 3. Matrix sizes adapt to the document count. The original Skills Network / IBM author credits and copyright notice are retained in the notebook.
