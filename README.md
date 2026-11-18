@@ -8,7 +8,7 @@ This repository demonstrates vector storage and retrieval, a building block of r
 
 - [`ChromaDB_query.py`](ChromaDB_query.py): grocery collection creation, sample data, and similarity search.
 - [`similarity_employeedata.py`](similarity_employeedata.py): employee profile similarity search, metadata filtering, and combined queries.
-- [Similarity Search by Hand.ipynb](Similarity%20Search%20by%20Hand.ipynb): completed lab for Euclidean distance, dot products, cosine similarity, and ranked query search.
+- [Similarity Search by Hand.ipynb](Similarity%20Search%20by%20Hand.ipynb): beginner-friendly, hands-on learning lab for embeddings, Euclidean distance, dot products, cosine similarity, and ranked query search.
 - [`requirements-notebook.txt`](requirements-notebook.txt): shared dependencies plus NumPy, SciPy, and JupyterLab.
 - [`requirements.txt`](requirements.txt): Python dependencies and the PyTorch CPU package index.
 
@@ -148,7 +148,9 @@ Edit the `employees` list in `main()` to change the sample profiles. Modify the 
 
 ## Similarity search by hand notebook
 
-The completed [Similarity Search by Hand](Similarity%20Search%20by%20Hand.ipynb) lab explores the mathematics behind vector search without a vector database. It uses `paraphrase-MiniLM-L6-v2` to embed five documents, including Ashwik's software debugging example.
+The [Similarity Search by Hand](Similarity%20Search%20by%20Hand.ipynb) notebook is part of a learning exercise and hands-on lab for beginners. It introduces foundational concepts such as embeddings, vector distances, normalization, and similarity search through code you can run, inspect, and modify one cell at a time. The completed exercises help connect the underlying mathematics to practical Python implementations.
+
+Use the lab to experiment: change the sample documents or query text, predict which results should be closest, and compare your expectations with the calculated scores. It explores vector search without a vector database and uses `paraphrase-MiniLM-L6-v2` to embed five documents, including Ashwik's software debugging example.
 
 ```bash
 python -m pip install -r requirements-notebook.txt
