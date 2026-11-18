@@ -1,3 +1,27 @@
+# Employee profile search with Chroma DB and SentenceTransformers.
+# Stores 15 sample employee profiles as embedded documents plus structured
+# metadata. Demonstrates semantic search, metadata lookups, and combined queries.
+# Scores are cosine distances: lower values indicate closer matches.
+#
+# Run: python similarity_employeedata.py (after installing requirements.txt).
+# Customize:
+# - In perform_advaced_search(), edit the query_text assignment for each example.
+#   The first uses a list: query_text = ["Python developer with AWS experience"].
+#   Other examples use a string: query_text = "engineering team manager".
+#   Keep query_texts as a list of strings when passing it to collection.query().
+# - Change n_results in each collection.query() to set its maximum result count.
+#   The final summary separately displays up to three matches; adjust its
+#   min(3, ...) loop and "Top 3" heading if you want a different summary size.
+# - Edit where filters: department selects a team, $gte sets a minimum experience
+#   in years (inclusive), and $in selects allowed locations. $and combines rules.
+#   Example: where={"department": "Marketing"} or
+#   where={"experience": {"$gte": 5}}. collection.get() filters without ranking;
+#   collection.query() combines filters with semantic ranking.
+# - In main(), edit employees to change profiles; keep IDs unique and all fields
+#   used to construct documents and metadata present in each employee dictionary.
+# - Change the model name in ef to try another SentenceTransformer model.
+# Data is recreated each run; the first run may download the embedding model.
+
 # Importing necessary modules from the chromadb package:
 # chromadb is used to interact with the Chroma DB database,
 # embedding_functions is used to define the embedding model

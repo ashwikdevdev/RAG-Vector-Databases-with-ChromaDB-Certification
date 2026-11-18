@@ -1,3 +1,20 @@
+# Grocery similarity search with Chroma DB and SentenceTransformers.
+# Stores 14 sample grocery descriptions with IDs and metadata in an in-memory
+# collection, then searches for "apple" and "meat" and displays three matches each.
+# Scores are cosine distances: lower values indicate closer matches.
+#
+# Run: python ChromaDB_query.py (after installing requirements.txt).
+# Customize:
+# - In perform_similarity_search(), edit query_term, keeping it a list of strings:
+#   query_term = ["coffee", "fresh fruit"]
+# - Add n_results=3 to collection.query() to request three matches per query.
+#   The current query uses Chroma's default count; the display loop shows three.
+#   To display a different count, also update min(3, ...) and the "Top 3" heading.
+# - In main(), edit texts to change the dataset. IDs and metadata are generated
+#   automatically from that list; customize metadatas to add your own labels.
+# - Change the model name in ef to try another SentenceTransformer model.
+# Data is recreated each run; the first run may download the embedding model.
+
 import chromadb
 from chromadb.utils import embedding_functions
 
