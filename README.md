@@ -3,7 +3,7 @@
 
 ## What this project demonstrates
 
-I’m Ashwik, an aspiring AI/ML architect. Through these hands-on labs, I learned how text becomes searchable vector embeddings, how distance metrics affect retrieval, and how structured metadata can make semantic search more targeted. I connected the mathematics of similarity search with practical ChromaDB examples using grocery descriptions and employee profiles.
+I’m Ashwik, an aspiring AI/ML architect. Through these hands-on labs, I learned how text becomes searchable vector embeddings, how distance metrics affect retrieval    
 
 For recruiters and hiring teams, this repository demonstrates my practical skills in:
 
